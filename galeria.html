@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./estiles.css" />
+  <title>Tipos de Cables</title>
+</head>
+
+<body>
+  <header>
+    <h1>Tipos de Cables</h1>
+    <nav>
+      <ul>
+        <li><a href="./index.html">Inicio</a></li>
+        <li><a href="./cotizacion.html">Cotización</a></li>
+        <li><a href="./Productos.html">Productos</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="galeria">
+    <div class="imagen-port" onclick="mostrarImagen('./imagenes electrico/img3.jpeg')">
+      <img src="./imagenes electrico/img3.jpeg" alt="Tipo de Cable 1" />
+      <p>Cable flexible</p>
+    </div>
+
+    <div class="imagen-port" onclick="mostrarImagen('./imagenes electrico/img2.jpeg')">
+      <img src="./imagenes electrico/img2.jpeg" alt="Tipo de Cable 2" />
+      <p>Cable de alta tensión</p>
+    </div>
+
+    <div class="imagen-port" onclick="mostrarImagen('./imagenes electrico/img4.jpeg')">
+      <img src="./imagenes electrico/img4.jpeg" alt="Tipo de Cable 3" />
+      <p>Cable Alambre aislado</p>
+    </div>
+
+    <div class="imagen-port" onclick="mostrarImagen('./imagenes electrico/img5.jpeg')">
+      <img src="./imagenes electrico/img5.jpeg" alt="Tipo de Cable 1" />
+      <p>Cable tipo SJOOW</p>
+    </div>
+
+    <div class="imagen-port" onclick="mostrarImagen('./imagenes electrico/img6.jpeg')">
+      <img src="./imagenes electrico/img6.jpeg" alt="Tipo de Cable 2" />
+      <p>Cable tipo SOOW</p>
+    </div>
+
+    <div class="imagen-port" onclick="mostrarImagen('./imagenes electrico/img8.jpeg')">
+      <img src="./imagenes electrico/img8.jpeg" alt="Tipo de Cable 3" />
+      <p>Cable solar</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>
+      Garcia José, Villagra Ariel | Instituto Nuestra Señora del Buen Viaje |
+      Año 2023
+    </p>
+  </footer>
+
+  <script>
+    function mostrarImagen(rutaImagen) {
+      window.open(rutaImagen, "_blank");
+    }
+  </script>
+</body>
+
+</html>

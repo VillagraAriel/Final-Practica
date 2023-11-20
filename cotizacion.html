@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./estilo.css" />
+    <title>Cotización de Cables</title>
+    <style>
+      nav ul li {
+        display: block;
+        float: left;
+        margin-right: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Cotización de productos de cables</h1>
+      <nav>
+        <ul>
+          <li><a href="./index.html">Inicio</a></li>
+          <li><a href="./Productos.html">Productos</a></li>
+          <li><a href="galeria.html">Galeria</a></li>
+          <li><a href="./contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section>
+      <h2>Formulario de Cotización de Cables</h2>
+      <form id="cotizacionForm" action="procesar_cotizacion.php" method="post">
+        <label for="tipo_cable">Tipo de Cable:</label>
+        <input type="text" id="tipo_cable" name="tipo_cable" required />
+
+        <label for="longitud">Longitud (metros):</label>
+        <input type="number" id="longitud" name="longitud" required />
+
+        <!-- Opciones de cotización -->
+        <div class="custom-select" id="tipo_conexion_select">
+          <label for="tipo_conexion">Tipo de Conexión:</label>
+          <div class="select-container">
+            <div class="selected-item" onclick="toggleOptions()">
+              Selecciona una opción
+            </div>
+            <ul class="options" id="tipo_conexion_options">
+              <li data-value="conexion_directa" onclick="selectOption(this)">
+                Conexión Directa
+              </li>
+              <li data-value="conexion_enchufe" onclick="selectOption(this)">
+                Conexión con Enchufe
+              </li>
+              <li data-value="conexion_terminal" onclick="selectOption(this)">
+                Conexión Terminal
+              </li>
+            </ul>
+          </div>
+          <input
+            type="hidden"
+            name="tipo_conexion"
+            id="tipo_conexion"
+            required
+          />
+        </div>
+        <button type="button" onclick="enviarCotizacion()">
+          Enviar Cotización
+        </button>
+      </form>
+    </section>
+    <footer>
+      <p>
+        Garcia Jose, villagra Ariel | Instituto Nuestra Señora del Buen Viaje | Año 2023
+      </p>
+    </footer>
+    <script src="./cotizacion.js"></script>
+  </body>
+</html>
