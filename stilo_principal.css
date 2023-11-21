@@ -69,9 +69,6 @@ nav a:hover {
     background-color: #414169;
 }
 
-header {
-    position: relative; /* Añade posición relativa */
-}
 
 .menu-toggle {
     position: fixed;
